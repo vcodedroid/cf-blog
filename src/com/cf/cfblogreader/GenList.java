@@ -1,4 +1,4 @@
-package com.cf.cfblog;
+package com.cf.cfblogreader;
 
 import java.util.ArrayList;
 

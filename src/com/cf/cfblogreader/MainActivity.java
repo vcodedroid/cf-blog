@@ -1,4 +1,4 @@
-package com.cf.cfblog;
+package com.cf.cfblogreader;
 import android.app.Activity;
 import android.os.Bundle;
 
