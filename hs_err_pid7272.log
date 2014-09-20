@@ -1,0 +1,99 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  Internal Error (434C41535326494C453041525345520E4350500AB6), pid=7272, tid=5172
+#
+# Java VM: Java HotSpot(TM) Client VM (1.6.0-b105 mixed mode)
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01778000):  JavaThread "Unknown thread" [_thread_in_vm, id=5172]
+
+Stack: [0x01420000,0x01470000)
+[error occurred during error reporting, step 110, id 0xc00000fd]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [javaw.exe+0xc07c]
+C  [javaw.exe+0x7d35]
+C  [KERNEL32.DLL+0x173e]
+C  [ntdll.dll+0x56911]
+C  [ntdll.dll+0x568bd]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+VM state:not at safepoint (not fully initilizated)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 960K, used 0K [0x03780000, 0x03880000, 0x03c60000)
+  eden space 896K,   0% used [0x03780000, 0x03780000, 0x03860000)
+  from space 64K,   0% used [0x03860000, 0x03860000, 0x03870000)
+  to   space 64K,   0% used [0x03870000, 0x03870000, 0x03880000)
+ tenured generation   total 4096K, used 0K [0x03c60000, 0x04060000, 0x07780000)
+   the space 4096K,   0% used [0x03c60000, 0x03c60000, 0x03c60200, 0x04060000)
+ compacting perm gen  total 12288K, used 105K [0x07780000, 0x08380000, 0x0b780000)
+   the space 12288K,   0% used [0x07780000, 0x0779a498, 0x0779a600, 0x08380000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00423000 	C:\Program Files\Java\jre1.6.0\bin\javaw.exe
+0x778b0000 - 0x77a18000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75e10000 - 0x75f08000 	C:\Windows\system32\KERNEL32.DLL
+0x75210000 - 0x752cd000 	C:\Windows\system32\KERNELBASE.dll
+0x760a0000 - 0x7614e000 	C:\Windows\system32\ADVAPI32.dll
+0x759a0000 - 0x75ac1000 	C:\Windows\system32\USER32.dll
+0x75550000 - 0x75601000 	C:\Windows\system32\msvcrt.dll
+0x75dd0000 - 0x75e04000 	C:\Windows\SYSTEM32\sechost.dll
+0x75fb0000 - 0x76081000 	C:\Windows\system32\RPCRT4.dll
+0x752d0000 - 0x753db000 	C:\Windows\system32\GDI32.dll
+0x753e0000 - 0x7540b000 	C:\Windows\system32\IMM32.DLL
+0x75750000 - 0x7582e000 	C:\Windows\system32\MSCTF.dll
+0x71f80000 - 0x71f9a000 	C:\PROGRA~1\SupTab\SEARCH~1.DLL
+0x75610000 - 0x75650000 	C:\Windows\system32\SHLWAPI.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jre1.6.0\bin\msvcr71.dll
+0x6d7c0000 - 0x6da07000 	C:\Program Files\Java\jre1.6.0\bin\client\jvm.dll
+0x72730000 - 0x72751000 	C:\Windows\SYSTEM32\WINMM.dll
+0x71700000 - 0x7172b000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x74fa0000 - 0x74fe6000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x74f30000 - 0x74f4e000 	C:\Windows\system32\DEVOBJ.dll
+0x6ffe0000 - 0x70087000 	C:\Windows\system32\apphelp.dll
+0x6d310000 - 0x6d318000 	C:\Program Files\Java\jre1.6.0\bin\hpi.dll
+0x75740000 - 0x75746000 	C:\Windows\system32\PSAPI.DLL
+0x6d400000 - 0x6d429000 	C:\Program Files\Java\jre1.6.0\bin\jdwp.dll
+0x6d6c0000 - 0x6d6c6000 	C:\Program Files\Java\jre1.6.0\bin\npt.dll
+0x6d770000 - 0x6d77c000 	C:\Program Files\Java\jre1.6.0\bin\verify.dll
+0x6d3b0000 - 0x6d3cf000 	C:\Program Files\Java\jre1.6.0\bin\java.dll
+0x6d7b0000 - 0x6d7bf000 	C:\Program Files\Java\jre1.6.0\bin\zip.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:56919 -Dfile.encoding=Cp1252 -Xbootclasspath:E:\adt-bundle-windows-x86-20131030\sdk\platforms\android-19\android.jar
+java_command: com.cf.cfblogreader.ParseBlogList
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.6.0/bin/client;C:/Program Files/Java/jre1.6.0/bin;C:/Program Files/Java/jre1.6.0/lib/i386;C:\Program Files\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.6.0\bin;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Sublime Text 3;C:\Program Files\Git\bin;C:\Windows\System32C:\Windows\System32;C:\cygwin\bin\;C:\Program Files\Notepad++;C:\Program Files\nodejs\;C:\Users\venkat\Desktop\adt-bundle-windows-x86-20131030\sdk\tools;C:\Users\venkat\Desktop\phonegap\bin;C:\RailsInstaller\Ruby1.9.3\bin;C:\Python27;C:\MinGW\msys\1.0\bin;C:\Program Files\apache-ant-1.9.4\bin;C:\Users\venkat\Desktop\phonegap-android-master\lib;C:\Users\venkat\AppData\Roaming\npm;E:\adt-bundle-windows-x86-20131030\eclipse;
+USERNAME=venkat
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 family 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 1986920k(931488k free), swap 4194303k(3335164k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.6.0-b105) for windows-x86, built on Nov 29 2006 00:48:48 by "java_re" with unknown MS VC++:1310
+

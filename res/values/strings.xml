@@ -4,5 +4,6 @@
     <string name="app_name">Cf Blog Reader</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">This is cf blog-reader</string>
-
+	<string name="handle">Hanle</string>
+	<string name="title">Title of the blog</string>
 </resources>
