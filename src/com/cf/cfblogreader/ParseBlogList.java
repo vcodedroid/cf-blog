@@ -1,5 +1,6 @@
 package com.cf.cfblogreader;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
@@ -7,7 +8,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class ParseBlogList {
+import android.os.AsyncTask;
+
+public class ParseBlogList extends AsyncTask<URL, Integer, Boolean> 
+{
 	
 	private ArrayList<BlogRecord> records;
 	
@@ -18,14 +22,9 @@ public class ParseBlogList {
 	private final String innerDomTag = new String("a");
 	private final String domAttribute = new String("href");
 	Document doc;
-	
-	public ArrayList<BlogRecord> getBlogs()
-	{
-		return records;
-	}
-	
-	public void loadDoc()
-	{
+
+	@Override
+	protected Boolean doInBackground(java.net.URL... url) {
 		Elements recentList;
 		Elements list;
 		Elements curr;
@@ -59,12 +58,13 @@ public class ParseBlogList {
 		{
 			System.out.println("Exception in loading the doc "+e);
 		}
+		return null;
 	}
 	
-	public static void main(String ds[])
+	
+	public ArrayList<BlogRecord> onPostExecute()
 	{
-		ParseBlogList b = new ParseBlogList();
-		b.loadDoc();
-		System.out.println("successfull parsing");
+		return records;
 	}
+	
 }

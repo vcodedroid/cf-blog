@@ -2,6 +2,7 @@ package com.cf.cfblogreader;
 
 import java.util.ArrayList;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +13,16 @@ public class BlogListAdapter extends BaseAdapter
 {
 	private ArrayList<BlogRecord> blogs = new ArrayList<BlogRecord>();
 	
-	public BlogListAdapter()
+	public BlogListAdapter(Context context)
 	{
-		for(int i=0;i<10;i++)
-			blogs.add(new BlogRecord("vb", "vb", "vb", "vb"));
-		ParseBlogList parse = new ParseBlogList();
-		parse.loadDoc();
-		blogs = parse.getBlogs();
-
+		BlogListDataSource ds = new BlogListDataSource(context);
+		ds.open();
+		for(int i=0;i<2;i++)
+		{
+			ds.addListItem(new BlogRecord("venkatvb", "venkatvb", "vb", "vb"));
+		}
+		blogs = ds.getAllBlogs();
+		ds.close();
 	}
 	
 	@Override

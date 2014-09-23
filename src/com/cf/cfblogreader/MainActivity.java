@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
             //GenList gen = new GenList(this);
             //gen.generate();
             ListView list = (ListView) findViewById(R.id.blogs_list);
-            blogListAdapter = new BlogListAdapter();
+            blogListAdapter = new BlogListAdapter(this);
             list.setAdapter(blogListAdapter);
     }       
 }
