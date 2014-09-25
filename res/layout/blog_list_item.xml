@@ -18,4 +18,5 @@
         android:text="@string/title"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 	
+    
 </LinearLayout>

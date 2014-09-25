@@ -14,6 +14,7 @@ public class BlogListDataSource {
 	private SQLiteDatabase database;
 	private ListDbHelper dbHelper;
 	private String[] allColumns = {
+	ListDbHelper.COLUMN_ID,
 	ListDbHelper.COLUMN_BLOGID,
 	ListDbHelper.COLUMN_HANDLE,
 	ListDbHelper.COLUM_TITLE,
@@ -26,6 +27,11 @@ public class BlogListDataSource {
 	  dbHelper = new ListDbHelper(context);
   }
 
+  public Cursor getAllBlogRecords()
+  {
+	  return database.rawQuery("select * from "+ListDbHelper.TABLE_RECENT, null);	//dude, better use sqlitequerybuilder :)
+  }
+  
   public void open() throws SQLException {
     database = dbHelper.getWritableDatabase();
   }
@@ -84,7 +90,7 @@ public class BlogListDataSource {
 
   private BlogRecord cursorToComment(Cursor cursor) {
 	  System.out.println("Printing the cursoor "+cursor);
-	  BlogRecord rec = new BlogRecord(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+	  BlogRecord rec = new BlogRecord(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
 	  return rec;
   }
 } 

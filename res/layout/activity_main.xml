@@ -4,4 +4,4 @@
     android:layout_height="fill_parent"
     android:divider="#0000CC"
     android:dividerHeight="0.1dp" >
-    </ListView>
+</ListView>
